@@ -34,7 +34,7 @@ That covers all the major options you would need for roll tables, but if there's
 
 Roll tables can have a title along with an optional description and image. The dice notation for the table will be calculated automatically based on the number of items in the table, or you can specify a dice notation to use.
 
-Roll tables are created as a custom post type and are compatible with the block editor and the classic editor.
+Roll tables are created as a custom post type that are fully compatible with the Block Editor as well as the Classic Editor.
 
 == Frequently Asked Questions ==
 
