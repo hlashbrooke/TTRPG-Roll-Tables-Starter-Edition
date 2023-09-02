@@ -44,7 +44,12 @@ This Started Edition allows you to add text items to your table - you can do thi
 
 = How do I display roll tables to my site visitors? =
 
-
+Roll Tables are displayed with a shortcode. These are provided in the dashboard to easily copy & paste for each table or table group. The shortcode can take any number of Roll Table IDs or Roll Table Group IDs. Here are some examples:
+* `[roll_table table=13]`.
+* `[roll_table table=13,62]`.
+* `[roll_table group=10]`.
+* `[roll_table group=10,15]`.
+* `[roll_table table=13,62,34 group=10,15]`.
 
 = I have an existing d100 table - can I import that without having to type it all in? =
 
@@ -62,7 +67,7 @@ You mean I haven't thought of that and included it? Poor form! Please log an iss
 
 1. The simple, but powerful interface for creating tables.
 2. Animation showing the roll table from the first screenshot in action
-3. The updated interface that comes with the full version.
+3. The updated roll table interface that comes with the full version.
 
 == Changelog ==
 
