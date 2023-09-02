@@ -3,7 +3,7 @@
 /*
  * Plugin Name: TTRPG Roll Tables: Starter Edition
  * Version: 1.0
- * Plugin URI: https://hlashbrooke.itch.io/
+ * Plugin URI: https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin
  * Description: Create easy roll tables for tabletop role-playing games, starter edition. Get the full version for more features!
  * Author: Hugh Lashbrooke
  * Author URI: https://hughlashbrooke.com/
