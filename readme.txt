@@ -27,29 +27,29 @@ That's what this plugin offers - an interface for creating roll tables inside yo
 
 **With the full version, [available here](https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin), you get the following additional features:**
 * Set a table item to pull a random result from a different table (that's what the 'Treasure' table in the Kiwi Acres example above does)
-* Have a table item run mathematical operations akin to something like "d20 x 10 gold coins", so you can rol for random amounts of currency
-* Import an existing list of table items into a roll table (you have that d100 table you want to include? Now you can import it)
+* Have a table item run mathematical operations akin to something like "d20 x 10 gold coins", so you can roll for random amounts of currency
+* Import an existing list of table items into a roll table (you have that d100 table you want to include? Now you can import it!)
 
 That covers all the major options you would need for roll tables, but if there's anything else you think should be included please let me know by logging an issue [on GitHub](https://github.com/hlashbrooke/TTRPG-Roll-Tables-Starter-Edition/issues).
 
 Roll tables can have a title along with an optional description and image. The dice notation for the table will be calculated automatically based on the number of items in the table, or you can specify a dice notation to use.
 
-Roll tables are created as a custom post type that are fully compatible with the Block Editor as well as the Classic Editor.
+Roll tables are created as a custom post type that is fully compatible with the Block Editor as well as the Classic Editor.
 
 == Frequently Asked Questions ==
 
 = How do I add new table items? =
 
-This Started Edition allows you to add text items to your table - you can do this when creating or editing a 'Roll Table' post. You must save the post in order to save the roll table items - they will not be saved automatically.
+This Starter Edition allows you to add text items to your table - you can do this when creating or editing a 'Roll Table' post. You must save the post in order to save the roll table items - they will not be saved automatically.
 
 = How do I display roll tables to my site visitors? =
 
 Roll Tables are displayed with a shortcode. These are provided in the dashboard to easily copy & paste for each table or table group. The shortcode can take any number of Roll Table IDs or Roll Table Group IDs. Here are some examples:
-* `[roll_table table=13]`.
-* `[roll_table table=13,62]`.
-* `[roll_table group=10]`.
-* `[roll_table group=10,15]`.
-* `[roll_table table=13,62,34 group=10,15]`.
+* `[roll_table table=13]`
+* `[roll_table table=13,62]`
+* `[roll_table group=10]`
+* `[roll_table group=10,15]`
+* `[roll_table table=13,62,34 group=10,15]`
 
 = I have an existing d100 table - can I import that without having to type it all in? =
 
@@ -66,7 +66,7 @@ You mean I haven't thought of that and included it? Poor form! Please log an iss
 == Screenshots ==
 
 1. The simple, but powerful interface for creating tables.
-2. Animation showing the roll table from the first screenshot in action
+2. Animation showing the roll table from the first screenshot in action.
 3. The updated roll table interface that comes with the full version.
 
 == Changelog ==
