@@ -1,0 +1,60 @@
+<?php
+
+/*
+ * Plugin Name: TTRPG Roll Tables: Starter Edition
+ * Version: 1.0
+ * Plugin URI: https://hlashbrooke.itch.io/
+ * Description: Create easy roll tables for tabletop role-playing games, starter edition. Get the full version for more features!
+ * Author: Hugh Lashbrooke
+ * Author URI: https://hughlashbrooke.com/
+ * Requires at least: 6.0
+ * Tested up to: 6.3
+ *
+ * Text Domain: ttrpg-roll-tables
+ * Domain Path: /languages/
+ *
+ * @package WordPress
+ * @author Hugh Lashbrooke
+ * @since 1.0.0
+ */
+
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+// Include plugin files
+include 'includes/post-types.php';
+include 'includes/metabox.php';
+include 'includes/ajax.php';
+include 'includes/shortcode.php';
+
+// Set up the plugin
+add_action( 'init', 'trt_plugin_setup', 0 );
+function trt_plugin_setup () {
+    trt_register_post_type();
+    trt_register_taxonomy();
+    trt_register_post_meta();
+}
+
+// Load plugin CSS & JS
+add_action( 'wp_enqueue_scripts', 'trt_custom_scripts' );
+function trt_custom_scripts() {
+
+    // Register and load the CSS
+    if( apply_filters( 'trt_use_plugin_css', true ) ) {
+        wp_register_style( 'trt-styles', plugins_url( 'assets/style.css', __FILE__ ), array(), '1.0' );
+        wp_enqueue_style( 'trt-styles' );
+    }
+
+    // Regsiter the required JS - it will only be enqueued in the shortcode
+    wp_register_script( 'shuffle-letters', plugins_url( 'assets/jquery.shuffleLetters.js', __FILE__ ), array( 'jquery' ), '1.0' );
+    wp_register_script( 'trt-scripts', plugins_url( 'assets/scripts.js', __FILE__ ), array( 'jquery', 'shuffle-letters' ), '1.0' );
+
+    // Add ajax parameters and localised strings to the JS
+    wp_localize_script( 'trt-scripts', 'roll_table', 
+        array( 
+            'ajax_url' => admin_url( 'admin-ajax.php' ),
+            'nonce' => wp_create_nonce( 'roll-table-nonce' ),
+            'rolling' => apply_filters( 'trt_rolling_text', __( 'Rolling...', 'ttrpg-roll-tables' ) ),
+            'error_message' => apply_filters( 'trt_roll_error_text', __( 'Error - reload the page and roll again.', 'ttrpg-roll-tables' ) ),
+        )
+    );
+}

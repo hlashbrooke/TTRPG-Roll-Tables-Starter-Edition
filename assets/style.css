@@ -1,0 +1,12 @@
+.rolltable_data_block {
+	text-align: center;
+}
+.rolltable_description {
+	font-style: italic;
+}
+.rolltable_result_output {
+	font-weight: 700;
+}
+.rolltable_button {
+	margin-top: 1em;
+}
