@@ -91,9 +91,11 @@ function trt_roll_tables_shortcode ( $atts ) {
                 $dice_notation = trt_get_dice_notation( $table_total );
             }
 
+            $dice_notation = apply_filters( 'trt_roll_table_dice_notation', $dice_notation, $table_id );
+
             $output .= '<div class="rolltable_data_block" id="rolltable-' . esc_attr( $table_id ) . '">';
 
-                $output .= '<h3 class="rolltable_title">' . apply_filters( 'trt_roll_table_description', get_the_title( $table_id ), $table_id ) . '</h3>';
+                $output .= '<h3 class="rolltable_title">' . apply_filters( 'trt_roll_table_title', get_the_title( $table_id ), $table_id ) . '</h3>';
 
                 if( $description ) {
                     $output .= '<aside class="rolltable_description">' . apply_filters( 'trt_roll_table_description', $description, $table_id ) . '</aside>';
@@ -131,6 +133,8 @@ function trt_get_dice_notation ( $table_total = '6' ) {
     $return = '';
 
     $dice = apply_filters( 'trt_dice_notation', array(
+        '2' => 'd2',
+        '3' => 'd3',
         '4' => 'd4',
         '6' => 'd6',
         '8' => 'd8',
