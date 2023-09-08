@@ -115,6 +115,8 @@ function trt_options_metabox_display ( $post ) {
     </table>
     
     <p><a id="add-row" class="components-button is-secondary" href="#"><?php _e( 'Add another', 'ttrpg-roll-tables' ) ?></a></p>
+
+    <p><em><?php printf( __( '%sUpgrade to the Complete Edition%s for additional features:%s Set table items to select a random item from a different table, create math-based table items, and bulk import table items.', 'ttrpg-roll-tables' ), '<strong><a href="https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin" target="_blank">', '</a>', '</strong>' ); ?></em></p>
     <?php
 }
 

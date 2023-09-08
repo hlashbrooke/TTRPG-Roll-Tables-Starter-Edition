@@ -2,9 +2,9 @@
 
 /*
  * Plugin Name: TTRPG Roll Tables: Starter Edition
- * Version: 1.0
+ * Version: 1.1
  * Plugin URI: https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin
- * Description: Create easy roll tables for tabletop role-playing games, starter edition. Get the full version for more features!
+ * Description: Create easy roll tables for tabletop role-playing games. Starter Edition. Get the Complete Edition for more features!
  * Author: Hugh Lashbrooke
  * Author URI: https://hughlashbrooke.com/
  * Requires at least: 6.0
@@ -43,6 +43,13 @@ if( ! function_exists( 'tttrpg_roll_tables_plugin_setup' ) ) {
         trt_register_taxonomy();
         trt_register_post_meta();
     }
+
+    function trt_plugin_list_table_links( $links ) {
+        $extra_link = '<strong><a href="https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin" target="_blank">' . __( 'Upgrade to the Complete Edition', 'ttrpg-roll-tables' ) . '</a></strong>';
+        array_push( $links, $extra_link );
+        return $links;
+    }
+    add_filter( 'plugin_action_links_' . plugin_basename( __FILE__ ), 'trt_plugin_list_table_links' );
 
     // Load plugin CSS & JS
     add_action( 'wp_enqueue_scripts', 'trt_custom_scripts' );
