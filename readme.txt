@@ -1,11 +1,13 @@
 === TTRPG Roll Tables ===
 Contributors: Hugh Lashbrooke
-Tags: ttrpg
+Tags: ttrpg, rpg, roll tables, gaming
 Donate link: https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin
 Requires at least: 6.0
-Tested up to: 6.3
-License: GPL v3
-License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
+Tested up to: 6.4
+Stable tag: 1.0
+Requires PHP: 7.0
+License: GPL v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Create easy online roll tables for tabletop role-playing games.
 
