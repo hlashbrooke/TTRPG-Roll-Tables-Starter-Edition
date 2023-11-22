@@ -113,7 +113,7 @@ function trt_roll_tables_shortcode ( $atts ) {
                 }
 
                 $output .= '<div><button id="' . esc_attr( $table_id ) . '-button" data-ref="' . esc_attr( $table_id ) . '" class="rolltable_button wp-block-button__link wp-element-button">' . apply_filters( 'trt_roll_table_button_text', esc_html( $button_text ), $table_id, $dice_notation ) . '</button></div>';
-            
+
             $output .= '</div>';
 
         }

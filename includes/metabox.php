@@ -8,7 +8,7 @@ function trt_register_meta_boxes() {
 }
 add_action( 'add_meta_boxes', 'trt_register_meta_boxes' );
 
-// Display meta box on Roll Table posts 
+// Display meta box on Roll Table posts
 // Kudos to Helen Hou-Sandi for the code snippet for repeatable fields: https://gist.github.com/helen/1593065
 function trt_options_metabox_display ( $post ) {
 
@@ -38,7 +38,7 @@ function trt_options_metabox_display ( $post ) {
 
             return false;
         });
-    
+
         $( '.remove-row' ).on('click', function() {
             $(this).parents('tr').remove();
 
@@ -46,7 +46,7 @@ function trt_options_metabox_display ( $post ) {
             count--;
             $( '#trt_table_size' ).val( count );
             $( '#trt_table_size_display' ).text( count );
-            
+
             return false;
         });
 
@@ -73,7 +73,7 @@ function trt_options_metabox_display ( $post ) {
     <?php
 
     if ( $table_options ) :
-    
+
     foreach ( $table_options as $option ) {
     ?>
     <tr>
@@ -82,7 +82,7 @@ function trt_options_metabox_display ( $post ) {
                 <input type="text" class="components-text-control__input trt_option_input" name="trt_table_option[]" value="<?php if($option['trt_table_option'] != '') echo esc_attr( $option['trt_table_option'] ); ?>" title="<?php _e( 'The text that will appear in the table.', 'ttrpg-roll-tables' ) ?>" />
             </span>
         </td>
- 
+
         <td><a class="components-button is-secondary is-destructive remove-row" href="#"><?php _e( 'Remove', 'ttrpg-roll-tables' ) ?></a></td>
     </tr>
     <?php
@@ -96,11 +96,11 @@ function trt_options_metabox_display ( $post ) {
                 <input type="text" class="components-text-control__input trt_option_input" name="trt_table_option[]" title="<?php _e( 'The text that will appear in the table.', 'ttrpg-roll-tables' ) ?>" />
             </span>
         </td>
-    
+
         <td><a class="components-button is-secondary is-destructive remove-row" href="#"><?php _e( 'Remove', 'ttrpg-roll-tables' ) ?></a></td>
     </tr>
     <?php endif; ?>
-    
+
     <!-- empty hidden one for jQuery -->
     <tr class="empty-row screen-reader-text">
         <td class="trt_text_input_cell">
@@ -113,7 +113,7 @@ function trt_options_metabox_display ( $post ) {
     </tr>
     </tbody>
     </table>
-    
+
     <p><a id="add-row" class="components-button is-secondary" href="#"><?php _e( 'Add another', 'ttrpg-roll-tables' ) ?></a></p>
 
     <p><em><?php printf( __( '%sUpgrade to the Complete Edition%s for additional features:%s Set table items to select a random item from a different table, create math-based table items, and bulk import table items.', 'ttrpg-roll-tables' ), '<strong><a href="https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin" target="_blank">', '</a>', '</strong>' ); ?></em></p>
@@ -125,7 +125,7 @@ add_action( 'save_post', 'trt_options_metabox_save', 10, 2 );
 function trt_options_metabox_save ( $post_id, $post ) {
 
     // Security check
-    if ( ! isset( $_POST['trt_table_options_nonce'] ) || ! wp_verify_nonce( $_POST['trt_table_options_nonce'], 'trt_table_options_nonce' ) ) {
+    if ( ! isset( $_POST['trt_table_options_nonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['trt_table_options_nonce'] ) ) , 'trt_table_options_nonce' ) ) {
         return;
     }
 
@@ -149,15 +149,15 @@ function trt_options_metabox_save ( $post_id, $post ) {
     $new_options = array();
 
     // Get the submitted data
-    $dice_notation = $_POST['trt_dice_notation'];
-    $table_options = $_POST['trt_table_option'];
+    $dice_notation = sanitize_text_field( $_POST['trt_dice_notation'] );
+    $table_options = sanitize_text_field( $_POST['trt_table_option'] );
 
     // Update the submitted dice notation
     update_post_meta( $post_id, 'trt_dice_notation', $dice_notation );
-        
+
     // Get the total number of submitted options
-    $count = $_POST['trt_table_size'];
-    
+    $count = absint( $_POST['trt_table_size'] );
+
     // Build up an array of submitted data
     for ( $i = 0; $i < $count; $i++ ) {
         if ( $table_options[$i] != '' ) {

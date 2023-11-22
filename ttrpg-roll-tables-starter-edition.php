@@ -66,8 +66,8 @@ if( ! function_exists( 'tttrpg_roll_tables_plugin_setup' ) ) {
         wp_register_script( 'trt-scripts', plugins_url( 'assets/scripts.js', __FILE__ ), array( 'jquery', 'shuffle-letters' ), '1.0' );
 
         // Add ajax parameters and localised strings to the JS
-        wp_localize_script( 'trt-scripts', 'roll_table', 
-            array( 
+        wp_localize_script( 'trt-scripts', 'roll_table',
+            array(
                 'ajax_url' => admin_url( 'admin-ajax.php' ),
                 'nonce' => wp_create_nonce( 'roll-table-nonce' ),
                 'rolling' => apply_filters( 'trt_rolling_text', __( 'Rolling...', 'ttrpg-roll-tables' ) ),

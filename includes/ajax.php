@@ -29,7 +29,7 @@ function trt_handle_table_roll () {
     echo $result;
 
     // Script takes a critical hit
-    die(); 
+    die();
 }
 
 // Get the date for the requested table

@@ -7,7 +7,7 @@ Tested up to: 6.3
 License: GPL v3
 License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Create easy roll tables for tabletop role-playing games.
+Create easy online roll tables for tabletop role-playing games.
 
 == Description ==
 
@@ -25,7 +25,7 @@ That's what this plugin offers - an interface for creating roll tables inside yo
 * Display individual tables, or groups of tables, or a combination using a shortcode
 * Set table items to include any text you like
 
-**With the full version, [available here](https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin), you get the following additional features:**
+**With the Complete Edition, [available here](https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin), you get the following additional features:**
 * Set a table item to pull a random result from a different table (that's what the 'Treasure' table in the Kiwi Acres example above does)
 * Have a table item run mathematical operations akin to something like "d20 x 10 gold coins", so you can roll for random amounts of currency
 * Import an existing list of table items into a roll table (you have that d100 table you want to include? Now you can import it!)
@@ -53,21 +53,21 @@ Roll Tables are displayed with a shortcode. These are provided in the dashboard 
 
 = I have an existing d100 table - can I import that without having to type it all in? =
 
-Yes! With [the full version](https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin) you can import existing data into any roll table - simply paste it into the import text area with each item on a new line and click 'import'. Imported items will be appended onto existing roll tables. This requires the full version of the plugin.
+Yes! With [the Complete Edition](https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin) you can import existing data into any roll table - simply paste it into the import text area with each item on a new line and click 'import'. Imported items will be appended onto existing roll tables. This requires the Complete Edition of the plugin.
 
 = Why doesn't the plugin do this incredibly specific thing that I want it to do? =
 
 You mean I haven't thought of that and included it? Poor form! Please log an issue on [the GitHub repo](https://github.com/hlashbrooke/TTRPG-Roll-Tables-Starter-Edition/issues) and I'll see what I can do.
 
-= Where can I get the full version? =
+= Where can I get the Complete Edition? =
 
-[The full version of the TTRPG Roll Tables plugin is available here for a once-off purchase](https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin), no onoing licence fees! The full version of the plugin will replace the Starter Edition and all of the roll tables you have created will still be available after upgrading.
+[The Complete Edition of the TTRPG Roll Tables plugin is available here for a once-off purchase](https://hlashbrooke.itch.io/ttrpg-roll-tables-wordpress-plugin) - no ongoing licence fees! The Complete Edition of the plugin will replace the Starter Edition and all of the roll tables you have created will still be available after upgrading.
 
 == Screenshots ==
 
 1. The simple, but powerful interface for creating tables.
 2. Animation showing the roll table from the first screenshot in action.
-3. The updated roll table interface that comes with the full version.
+3. The updated roll table interface that comes with the Complete Edition.
 
 == Changelog ==
 

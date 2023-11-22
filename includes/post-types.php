@@ -150,7 +150,7 @@ function trt_allowed_block_types( $allowed_blocks, $editor_context ) {
 
 // Modify columns on the Roll Table list table
 function trt_add_admin_columns ( $columns ) {
-    return array_merge ( $columns, array ( 
+    return array_merge ( $columns, array (
         'shortcode' => __ ( 'Shortcode', 'ttrpg-roll-tables' ),
         'table_size' => __ ( 'Table Size', 'ttrpg-roll-tables' ),
     ) );
